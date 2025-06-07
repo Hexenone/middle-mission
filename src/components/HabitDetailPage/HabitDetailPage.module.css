@@ -1,0 +1,199 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 16px 24px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.backButton {
+  color: #666;
+  transition: color 0.2s;
+}
+
+.backButton:hover {
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  flex: 1;
+}
+
+.content {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+.section {
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sectionContent {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.description {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: #fafafa;
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+.datesList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dateItem {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.dateItem:hover {
+  background-color: #fafafa;
+  border-color: #eee;
+}
+
+.dateItem :global(.MuiFormControlLabel-root) {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.dateItem :global(.MuiFormControlLabel-label) {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.dateItem :global(.MuiCheckbox-root) {
+  padding: 8px;
+  margin-right: 12px;
+  color: #666;
+}
+
+.dateItem :global(.MuiCheckbox-root.Mui-checked) {
+  color: #1976d2;
+}
+
+.deleteButton {
+  margin-top: auto;
+  padding: 24px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.deleteButton :global(.MuiButton-root) {
+  min-width: 200px;
+  height: 48px;
+  font-weight: 500;
+  text-transform: none;
+  font-size: 1rem;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 16px;
+  color: #666;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+  padding: 32px;
+  gap: 16px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Skeleton styles */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 4px;
+}
+
+.skeletonTitle {
+  height: 32px;
+  width: 200px;
+}
+
+.skeletonText {
+  height: 20px;
+  width: 100%;
+}
+
+.skeletonCheckbox {
+  height: 24px;
+  width: 100%;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
