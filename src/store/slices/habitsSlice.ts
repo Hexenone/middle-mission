@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import type { PayloadAction } from '@reduxjs/toolkit';
 import type { Habit } from '../../types/habit';
 import api from '../../api/axios';
 
@@ -81,9 +80,6 @@ const habitsSlice = createSlice({
   name: 'habits',
   initialState,
   reducers: {
-    setCurrentHabit: (state, action: PayloadAction<Habit | null>) => {
-      state.currentHabit = action.payload;
-    },
   },
   extraReducers: (builder) => {
     builder
@@ -156,5 +152,5 @@ const habitsSlice = createSlice({
   },
 });
 
-export const { setCurrentHabit } = habitsSlice.actions;
+export const {} = habitsSlice.actions;
 export default habitsSlice.reducer; 
